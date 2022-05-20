@@ -1,8 +1,13 @@
 // PRENDIAMO GLI ELEMENTI DEL FORM DI INPUT QUINDI TUTTI
 var inputElements = document.querySelectorAll(".form-container__input");
 var formEl = document.querySelector(".form-container__form");
+// TODO : Dinamic color
+var title = document.querySelector(".info__title");
+// title.style.color = "red";
 formEl.addEventListener("submit", function (event) {
+    //previene il comportamento di default al caricamento della pagina
     event.preventDefault();
+    // title.style.display = 'none';
     var inputsValidity = [];
     // TODO: CONTROLLARE IL VALORE DELL'INPUT CHE SCRIVO
     inputElements.forEach(function (el, index) {
@@ -20,6 +25,7 @@ formEl.addEventListener("submit", function (event) {
             }
         }
         else if (el.type === "email") {
+            // @ts-ignore
             if (el.value.includes("@")) {
                 inputsValidity[index] = true;
                 el.classList.remove("invalid");
@@ -37,6 +43,10 @@ formEl.addEventListener("submit", function (event) {
         alert("NON HAI COMPLETATO!");
     }
 });
+// TODO --> Al click del testo scompare
+// title.addEventListener("click", (event: Event) => {
+//   title.style.display = "none";
+// });
 // const firstName = 'First Name';
 // const surname = 'Last Name';
 // if(firstName.length > 3) {

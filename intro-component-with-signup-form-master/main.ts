@@ -3,11 +3,21 @@ const inputElements = document.querySelectorAll<HTMLInputElement>(".form-contain
 
 const formEl = document.querySelector<HTMLFormElement>(".form-container__form");
 
+// TODO : Dinamic color
+
+const title = document.querySelector<HTMLHeadingElement>(".info__title");
+// title.style.color = "red";
+
 formEl.addEventListener("submit", (event: Event) => {
+  //previene il comportamento di default al caricamento della pagina
   event.preventDefault();
 
+  // title.style.display = 'none';
+
   let inputsValidity: boolean[] = [];
+
   // TODO: CONTROLLARE IL VALORE DELL'INPUT CHE SCRIVO
+
   inputElements.forEach((el, index) => {
     // el.value;
     // console.log(el.value);
@@ -21,6 +31,7 @@ formEl.addEventListener("submit", (event: Event) => {
         inputsValidity[index] = false;
       }
     } else if (el.type === "email") {
+      // @ts-ignore
       if (el.value.includes("@")) {
         inputsValidity[index] = true;
         el.classList.remove("invalid");
@@ -37,6 +48,12 @@ formEl.addEventListener("submit", (event: Event) => {
     alert("NON HAI COMPLETATO!");
   }
 });
+
+// TODO --> Al click del testo scompare
+
+// title.addEventListener("click", (event: Event) => {
+//   title.style.display = "none";
+// });
 
 // const firstName = 'First Name';
 // const surname = 'Last Name';
