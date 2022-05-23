@@ -1,9 +1,16 @@
 // PRENDIAMO GLI ELEMENTI DEL FORM DI INPUT QUINDI TUTTI
 var inputElements = document.querySelectorAll(".form-container__input");
 var formEl = document.querySelector(".form-container__form");
-// TODO : Dinamic color
-var title = document.querySelector(".info__title");
+var newBackgroundColor = document.querySelector(".form-container__trial-info");
+function changeBgColor(color) {
+    newBackgroundColor.style.backgroundColor = color;
+}
+// const title = document.querySelector<HTMLHeadingElement>(".info__title");
 // title.style.color = "red";
+// TODO :  Al click resta fisso il colore
+newBackgroundColor.addEventListener("mouseover", function () { return changeBgColor("pink"); });
+// TODO : Al click cambia colore
+newBackgroundColor.addEventListener("mouseleave", function () { return changeBgColor("black"); });
 formEl.addEventListener("submit", function (event) {
     //previene il comportamento di default al caricamento della pagina
     event.preventDefault();

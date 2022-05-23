@@ -3,10 +3,22 @@ const inputElements = document.querySelectorAll<HTMLInputElement>(".form-contain
 
 const formEl = document.querySelector<HTMLFormElement>(".form-container__form");
 
-// TODO : Dinamic color
+const newBackgroundColor = document.querySelector<HTMLElement>(".form-container__trial-info");
 
-const title = document.querySelector<HTMLHeadingElement>(".info__title");
+function changeBgColor(color: string) {
+  newBackgroundColor.style.backgroundColor = color;
+}
+
+// const title = document.querySelector<HTMLHeadingElement>(".info__title");
 // title.style.color = "red";
+
+// TODO :  Al click resta fisso il colore e non cambia
+
+newBackgroundColor.addEventListener("mouseover", () => changeBgColor("pink"));
+
+// TODO : Al click cambia colore
+
+newBackgroundColor.addEventListener("mouseleave", () => changeBgColor("black"));
 
 formEl.addEventListener("submit", (event: Event) => {
   //previene il comportamento di default al caricamento della pagina
