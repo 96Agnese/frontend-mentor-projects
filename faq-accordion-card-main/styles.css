@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /* RESPONSIVE */
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  --primary: hsl(273, 75%, 66%);
+  --secondary: hsl(240, 73%, 65%);
+  /* ICON */
+  --fort-red: hsl(14, 88%, 65%);
+
+  --dark-grayish: hsl(240, 6%, 50%);
+  --very-dark-grayish: hsl(237, 12%, 33%);
+
+  --default--ff: "Kumbh Sans", sans-serif;
+}
+
+/* GENERAL STYLE */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(var(--primary), var(--secondary));
+}
+.bold-text {
+  font-weight: 700;
+}
+
+.hidden-text {
+  display: none;
+}
+
+.container {
+  padding: 1rem;
+  background-color: aliceblue;
+  margin-top: 10rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 1.5rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.title {
+  padding-top: 8rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 2rem;
+}
+
+.container-title_description {
+  text-align: left;
+  padding-top: 0.5rem;
+}
+
+.container-title_icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.accordion {
+  background-color: aliceblue;
+  cursor: pointer;
+  padding: 0.6rem;
+  font-size: 13px;
+  color: var(--very-dark-grayish);
+  font-family: var(--default--ff);
+  padding-bottom: 1rem;
+  border: none;
+  outline: none;
+  transition: 0.8s;
+}
+
+.active,
+.accordion:hover {
+  background-color: pink;
+  border-radius: 1rem;
+}
+
+.panel-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.woman-mobile {
+  position: absolute;
+  left: 2.5rem;
+  right: 2.5rem;
+  top: -6.8rem;
+}
