@@ -29,6 +29,13 @@ body {
   min-height: 100vh;
   background: linear-gradient(var(--primary), var(--secondary));
 }
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 .bold-text {
   font-weight: 700;
 }
@@ -46,6 +53,10 @@ body {
   border-radius: 1.5rem;
   position: relative;
   margin-bottom: 3rem;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  max-width: var(--mobile);
 }
 .title {
   padding-top: 8rem;
@@ -58,13 +69,16 @@ body {
 .container-title_description {
   text-align: left;
   padding-top: 0.5rem;
+  min-width: 100%;
+}
+.container-text__description {
+  max-width: 90%;
 }
 
 .container-title_icon {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 
 .accordion {
@@ -78,6 +92,7 @@ body {
   border: none;
   outline: none;
   transition: 0.8s;
+  min-width: 100%;
 }
 
 .active,
@@ -90,13 +105,30 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
   overflow: hidden;
+  min-width: 100%;
 }
 
 .woman-mobile {
   position: absolute;
-  left: 2.5rem;
+  /* left: 2.5rem;
   right: 2.5rem;
-  top: -6.8rem;
+  top: -6.8rem; */
+  max-width: 70%;
+  transform: translateY(-65%);
+  left: 0;
+  right: 0;
+  margin: auto;
 }
+
+.shadow {
+  padding-left: 2rem;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 1440px) {
+
+ 
+
+ 
