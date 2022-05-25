@@ -166,7 +166,7 @@ function togglePanel(index: number) {
     // nascondimi il pagagrafo
     paragraph.style.display = "none";
     // e dammi il titolo a regular non bold
-    title.style.fontWeight = "600";
+    title.style.fontWeight = "500";
   } else {
     //mostrami il pagagrafo
     paragraph.style.display = "block";

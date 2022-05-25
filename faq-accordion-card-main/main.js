@@ -110,6 +110,7 @@ FAQs.forEach(function (el, index) {
     containerTextDesc.classList.add("container-text__description");
     containerTextDesc.textContent = el.text;
     containerTitleIconText.textContent = el.question;
+    //aggiunge le cose
     containerTitleIcon.appendChild(containerTitleIconText);
     containerTitleDesc.appendChild(containerTitleIcon);
     containerTitleDesc.appendChild(containerTextDesc);
@@ -141,7 +142,7 @@ function togglePanel(index) {
         // nascondimi il pagagrafo
         paragraph.style.display = "none";
         // e dammi il titolo a regular non bold
-        title.style.fontWeight = "600";
+        title.style.fontWeight = "500";
     }
     else {
         //mostrami il pagagrafo

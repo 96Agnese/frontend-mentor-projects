@@ -73,6 +73,7 @@ align-items: center;
 }
 .container-text__description {
   max-width: 90%;
+  padding-top: 0.3rem;
 }
 
 .container-title_icon {
