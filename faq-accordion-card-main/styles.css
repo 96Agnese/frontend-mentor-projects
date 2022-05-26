@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /* RESPONSIVE */
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  --primary: hsl(273, 75%, 66%);
+  --secondary: hsl(240, 73%, 65%);
+  /* ICON */
+  --fort-red: hsl(14, 88%, 65%);
+
+  --dark-grayish: hsl(240, 6%, 50%);
+  --very-dark-grayish: hsl(237, 12%, 33%);
+
+  --default--ff: "Kumbh Sans", sans-serif;
+}
+
+/* GENERAL STYLE */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(var(--primary), var(--secondary));
+}
+
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.hidden-text {
+  display: none;
+}
+
+.container {
+  padding: 1rem;
+  background-color: aliceblue;
+  margin-top: 10rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 1.5rem;
+  position: relative;
+  margin-bottom: 3rem;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  max-width: var(--mobile);
+}
+.title {
+  padding-top: 8rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 2rem;
+}
+
+.container-title_description {
+  text-align: left;
+  padding-top: 0.5rem;
+  min-width: 100%;
+}
+.container-text__description {
+  max-width: 90%;
+  padding-top: 0.3rem;
+}
+
+.container-title_icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion {
+  background-color: aliceblue;
+  cursor: pointer;
+  padding: 0.6rem;
+  font-size: 13px;
+  color: var(--very-dark-grayish);
+  font-family: var(--default--ff);
+  padding-bottom: 1rem;
+  border: none;
+  outline: none;
+  transition: 0.8s;
+  min-width: 100%;
+}
+
+.active,
+.accordion:hover {
+  background-color: pink;
+  border-radius: 1rem;
+}
+
+.panel-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  min-width: 100%;
+}
+
+.woman-mobile {
+  position: absolute;
+  /* left: 2.5rem;
+  right: 2.5rem;
+  top: -6.8rem; */
+  max-width: 70%;
+  transform: translateY(-65%);
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.shadow {
+  padding-left: 2rem;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 1440px) {
+
+ 
+
+ 
